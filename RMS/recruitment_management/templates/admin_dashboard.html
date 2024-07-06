@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h1>Placement Drives</h1>
+<ul>
+    {% for drive in placement_drives %}
+    <li>{{ drive.company_name }} - {{ drive.job_role }} on {{ drive.date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
